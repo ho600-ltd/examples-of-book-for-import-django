@@ -10,6 +10,9 @@ class EndSpot(models.Model):
             ('add_flowdata_under_this_end_spot', 'Add FlowData records under This EndSpot'),
         )
 
+    def __str__(self):
+        return self.topic
+
 class FlowData(models.Model):
     end_spot = models.ForeignKey(EndSpot, on_delete=models.CASCADE)
     timestamp = models.DecimalField(max_digits=20, decimal_places=6, db_index=True)
