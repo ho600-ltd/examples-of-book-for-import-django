@@ -75,8 +75,14 @@ WSGI_APPLICATION = 'restful_api_site.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'restful_api_site',
+        'USER': 'restful_api_site',
+        'PASSWORD': 'restful_api_site_pw',
+        'HOST': 'my.mariadb.host',
+        'PORT': '3306',
+        'OPTIONS': {
+        },
     }
 }
 
@@ -103,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-Hant'
 
 TIME_ZONE = 'UTC'
 
